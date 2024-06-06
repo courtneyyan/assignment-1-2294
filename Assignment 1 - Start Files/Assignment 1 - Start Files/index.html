@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>MDIA 2294</title>
-	<link rel="stylesheet" href="css/stylesheet.css">
 	
 	<style>
 	    thead{
@@ -94,10 +93,12 @@
 	<div>NOTE: discounts of 10% are given to orders over $250</div>
 
 	<script>
-	
-	calculate();
 
-			
+		//Courtney Yan
+		//A00809814
+		//Assignment 1
+
+		// we are creating a variable of the calculate button
 		const calculate_btn = document.querySelector('#calculate');
 
 			// const variables are variables that values don't change. 
@@ -109,7 +110,8 @@
 			const portable_holes = 15.25;
 			const tax_amnt = 0.12; 
 
-	    function calculate() 
+	    function calculate() // Our function is to calculate the total prices for each line and item and then 
+		//add the everything together and then see if the total is over $250, if so, we apply the 10% discount and the tax to get the final total
 		{
 
 			let subtotal = 0; // used for the subtotal
@@ -156,7 +158,7 @@
 			document.querySelector("#discount").innerHTML = "$" + discountPrice.toFixed(2);
 
 			// this calculates the tax by multiplying the subtotal and tax amount to two decimal point
-			let tax = subtotal * tax_amnt;
+			tax = subtotal * tax_amnt;
 			document.querySelector('#tax').innerHTML = "$" + tax.toFixed(2);
 			
 			
@@ -168,37 +170,13 @@
 			
 			
 		
-
-			
-
-			
-            /*
-
-                Use the following steps to complete your assignment.
-
-                @NOTE: Do not include these comments in your final submission. 
-                       Your final submission MUST include your own comments.
-
-                1. Retrieve the quantities & price for each line
-                2. Calculate the total for each line
-                3. Display each line total to the screen (Be sure to display the result to two decimal places)
-                4. Keep a running total for all lines
-                5. Display the sub-total to screen
-                6. Calculate if the discount should be applied, if so display the discount value to the screen
-                7. Calculate the tax on the sub-total
-                8. Display the calculated to the screen to two decimal places
-                
-            */
+          
 	    }
 
 
 
 		// calculate button 
-	calculate_btn.addEventListener("click", calculate); 
-			 
-           
-                
-        
+		calculate_btn.addEventListener("click", calculate);
 	
     </script>
 </body>
